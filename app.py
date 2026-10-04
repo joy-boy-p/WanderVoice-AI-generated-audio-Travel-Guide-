@@ -7,9 +7,9 @@ import base64
 
 app = Flask(__name__)
 CORS(app)
-MURF_API_KEY = "ap2_10c4fc3c-17b4-4e99-ac03-f9aa43d2df80"
+MURF_API_KEY = "YOUR-MURF-API-KEY"
 
-client = genai.Client(api_key="AIzaSyD4KjAy71rDgVuncpilt2KlWHztyVUutP4")
+client = genai.Client(api_key="YOUR GEMINI KEY")
 
 PROMPTS = {
     "Summary": """
@@ -54,7 +54,7 @@ def generate_speech(text, voice_id, locale):
    
     url = "https://global.api.murf.ai/v1/speech/stream"
     headers = {
-        "api-key": 'ap2_10c4fc3c-17b4-4e99-ac03-f9aa43d2df80',
+        "api-key": 'MURF-API-KEY',
         "Content-Type": "application/json"
     }
     data = {
